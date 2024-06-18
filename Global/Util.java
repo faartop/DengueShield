@@ -1,19 +1,11 @@
 package Global;
 
 import BancoDados.ConexaoBancoDados;
-import Classes.Denuncia;
-import Classes.Login;
-import Classes.TipoCadastro;
-import Classes.Usuario;
-import DAO.DenunciaDAO;
-import DAO.UsuarioDAO;
-
 import java.awt.*;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.sql.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 

@@ -3,6 +3,7 @@ package DAO;
 import API.ApiConnection;
 import BancoDados.ConexaoBancoDados;
 import Classes.Denuncia;
+import Classes.Status;
 import Global.Util;
 import org.json.JSONObject;
 
@@ -147,6 +148,14 @@ public class DenunciaDAO {
             }
         }
         return null;
+    }
+
+    public static void inativarDenuncia(Denuncia denuncia) {
+        Util.inativarCadastro(denuncia.getId(), "Status");
+    }
+
+    public static void retornarStatus() {
+        Util.consultaTabela("Denuncia");
     }
 
 }

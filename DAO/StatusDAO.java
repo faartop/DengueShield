@@ -59,11 +59,11 @@ public class StatusDAO {
         }
     }
 
-    public static void inativarStatus(int ID) {
-        Util.inativarCadastro(ID, "Status");
+    public static void inativarStatus(Status status) {
+        Util.inativarCadastro(status.getID(), "Status");
     }
 
-    public static void retornarDeununcia() {
+    public static void retornarStatus() {
         Util.consultaTabela("Status");
     }
 }
