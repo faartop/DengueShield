@@ -19,7 +19,7 @@ public class UsuarioDAO {
         this.conectar = conectar;
     }
 
-    public void novoUsuario(Usuario usuario){
+    public static void novoUsuario(Usuario usuario){
         String sql = "INSERT INTO usuario (nome,email,cpf,DataCadastro,tipoCadastroId,hash,salt) VALUES (?,?,?,?,?,?,?)";
 
         String dataCadastro = Util.RegistraDataAtual();
@@ -61,8 +61,8 @@ public class UsuarioDAO {
         return false;
     }
 
-    public void inativarUsuario(int id){
-        Util.inativarCadastro(id, "Usuario");
+    public static void inativarUsuario(Usuario usuario){
+        Util.inativarCadastro(usuario.getId(), "Usuario");
     }
 
     public void realizaLogin(Login login, String email, String senha) throws NoSuchAlgorithmException {
